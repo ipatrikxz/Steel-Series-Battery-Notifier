@@ -28,7 +28,7 @@ export default class Devices{
                 return null;
                 
             } catch (error) {
-                throw new Error('Hiba: ' + error);
+                throw new Error('Error: ' + error);
             }
         }); 
     }

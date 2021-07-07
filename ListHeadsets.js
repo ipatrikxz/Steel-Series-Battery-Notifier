@@ -1,7 +1,6 @@
 import HID from 'node-hid';
 HID.setDriverType('libusb');
 
-
 const headsets_ids = [
     [0x1038, 0x12ad], // Arctis 7 2019.
     [0x1038, 0x1260], // Arctis 7 2017.

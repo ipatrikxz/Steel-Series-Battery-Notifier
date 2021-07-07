@@ -20,14 +20,15 @@ catch (init_error) {
 
 setInterval(function(){
   try {
-      let battery_percent = myHeadset.getBatteryPercentage()
-      if (battery_percent != null) {
-        notify.pushNotification(battery_percent, state)
-        state = notify.state
-        console.log(`Battery: ${battery_percent}%`)
-      }
+    let battery_percent = myHeadset.getBatteryPercentage()
+    
+    if (battery_percent != null) {
+      notify.pushNotification(battery_percent, state)
+      state = notify.state
+      console.log(`Battery: ${battery_percent}%`)
+    }
   }
   catch (write_error) {
-      console.log(write_error)
+    throw new Error(write_error)
   }
 }, 1000);
